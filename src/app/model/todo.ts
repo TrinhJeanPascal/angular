@@ -1,4 +1,4 @@
-export interface todo {
+export interface Todo {
   label: String;
   done: Boolean;
 }

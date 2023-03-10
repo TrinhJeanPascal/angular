@@ -8,9 +8,7 @@ import { TodoListComponent } from './app/todo-list/todo-list.component';
   selector: 'my-app',
   standalone: true,
   imports: [CommonModule, TodoListComponent],
-  template: `
-    <app-todo-list></app-todo-list>
-  `,
+  template: `<app-todo-list></app-todo-list>`,
 })
 export class App {
   name = 'Angular';

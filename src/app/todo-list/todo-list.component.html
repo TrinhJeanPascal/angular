@@ -1,10 +1,13 @@
-<b> My Todo-List </b>
 <ul>
   <li
-    *ngFor="let todo of todo"
+    *ngFor="let todo of todos"
     [ngClass]="{ 'line-over-text': todo.done == true }"
-    (click)="updateTodoList(todo)"
+    (onclick)="fonction(todo)"
   >
-    {{ todo.label }}
+    <app-todo-item
+      [todo]="todo"
+      (newItemEvent)="fonction(todo)"
+    ></app-todo-item>
   </li>
+  <input #box (keyup.enter)="add(box.value)" />
 </ul>
