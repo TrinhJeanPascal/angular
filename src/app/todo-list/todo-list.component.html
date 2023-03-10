@@ -9,5 +9,5 @@
       (newItemEvent)="fonction(todo)"
     ></app-todo-item>
   </li>
-  <input #box (keyup.enter)="add(box.value)" />
+  <input [{NgModel}]="toTodoInsert" aceholder="NO" />
 </ul>
